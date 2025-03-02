@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 // https://www.youtube.com/playlist?list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm
 
@@ -39,13 +43,20 @@ func main() {
 	// fmt.Println(privateVariable)
 
 	// Video 8 (println and printf in Golang):------------------------------------------------------------
-	age := 22
-	name := "ww"
-	height := 5.6794838
-	fmt.Println("Name:", name, "Age:", age, "Height:", height)
+	// age := 22
+	// name := "ww"
+	// height := 5.6794838
+	// fmt.Println("Name:", name, "Age:", age, "Height:", height)
 
-	fmt.Printf("My height is %.3f", height)
-	fmt.Printf("My age is %d\n", age)
-	fmt.Printf("My name is %s\n", name)
-	fmt.Printf("Name %s, Age %d, Height %.3f", name, age, height)
+	// fmt.Printf("My height is %.3f", height)
+	// fmt.Printf("My age is %d\n", age)
+	// fmt.Printf("My name is %s\n", name)
+	// fmt.Printf("Name %s, Age %d, Height %.3f", name, age, height)
+
+	// Video 9 (taking inputs):------------------------------------------------------------
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter your name: ")
+	name, _ := reader.ReadString('\n')
+	fmt.Printf("Your name is %s", name)
+
 }
