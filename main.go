@@ -32,7 +32,7 @@ func main() {
 	// pi = 3		//it will show error
 	fmt.Println(pi)
 
-	//This is important, for declating the variable most developers use like below
+	//This is important, for declaring the variable most developers use like below
 	myName := "Salil"
 	fmt.Println(myName)
 
