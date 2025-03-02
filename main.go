@@ -1,10 +1,21 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
+
+func myFunction() {
+	fmt.Println("simple function")
+}
+
+func add(a int, b int) int {
+	return a + b
+}
+
+func multiply(a int, b int) (result int) {
+	result = a * b
+	return
+}
 
 // https://www.youtube.com/playlist?list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm
 
@@ -54,9 +65,17 @@ func main() {
 	// fmt.Printf("Name %s, Age %d, Height %.3f", name, age, height)
 
 	// Video 9 (taking inputs):------------------------------------------------------------
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter your name: ")
-	name, _ := reader.ReadString('\n')
-	fmt.Printf("Your name is %s", name)
+	// reader := bufio.NewReader(os.Stdin)
+	// fmt.Print("Enter your name: ")
+	// name, _ := reader.ReadString('\n')
+	// fmt.Printf("Your name is %s", name)
+
+	// Video 10 (functions):------------------------------------------------------------
+	myFunction()
+	addOutput := add(3, 4)
+	fmt.Println(addOutput)
+
+	mulOutput := multiply(3, 4)
+	fmt.Println(mulOutput)
 
 }
