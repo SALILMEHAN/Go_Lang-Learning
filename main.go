@@ -12,9 +12,16 @@ func add(a int, b int) int {
 	return a + b
 }
 
-func multiply(a int, b int) (result int) {
+func multiply(a, b int) (result int) {
 	result = a * b
 	return
+}
+
+func divide(a, b float64) (float64, error) {
+	if b == 0 {
+		return 0, fmt.Errorf("division by zero")
+	}
+	return a / b, nil
 }
 
 // https://www.youtube.com/playlist?list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm
@@ -71,11 +78,18 @@ func main() {
 	// fmt.Printf("Your name is %s", name)
 
 	// Video 10 (functions):------------------------------------------------------------
-	myFunction()
-	addOutput := add(3, 4)
-	fmt.Println(addOutput)
+	// myFunction()
+	// addOutput := add(3, 4)
+	// fmt.Println(addOutput)
 
-	mulOutput := multiply(3, 4)
-	fmt.Println(mulOutput)
+	// mulOutput := multiply(3, 4)
+	// fmt.Println(mulOutput)
 
+	// Video 11 (errors):------------------------------------------------------------
+	ans, err := divide(10, 0)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(ans)
+	}
 }
