@@ -86,10 +86,28 @@ func main() {
 	// fmt.Println(mulOutput)
 
 	// Video 11 (errors):------------------------------------------------------------
-	ans, err := divide(10, 0)
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println(ans)
-	}
+	// ans, err := divide(10, 0)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// } else {
+	// 	fmt.Println(ans)
+	// }
+
+	// Video 12 (arrays):------------------------------------------------------------
+	var number [5]int
+	number[0] = 1
+	number[1] = 2
+	number[2] = 3
+	number[3] = 4
+	number[4] = 5
+	fmt.Println(number[0])
+
+	var num = [5]int{1, 2, 3, 4, 5}
+	fmt.Println(num[3])
+
+	fmt.Println("Length of num is:", len(num))
+
+	var prices [10]int //after initialization of array every value assigned will be 0
+	fmt.Println(prices)
+
 }
