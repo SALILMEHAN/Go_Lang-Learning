@@ -111,15 +111,25 @@ func main() {
 	// fmt.Println(prices)
 
 	// Video 13 (slices):------------------------------------------------------------
-	var numbers = make([]int, 3, 5) // Type, Length, Capacity
+	// var numbers = make([]int, 3, 5) // Type, Length, Capacity
 
-	fmt.Println("Slice:", numbers)
-	fmt.Println("Length:", len(numbers))
-	fmt.Println("Capacity:", cap(numbers))
+	// fmt.Println("Slice:", numbers)
+	// fmt.Println("Length:", len(numbers))
+	// fmt.Println("Capacity:", cap(numbers))
 
-	numbers = append(numbers, 4) //when the length==capacity, then we append the element the capacity doubles
-	fmt.Println("Slice:", numbers)
-	fmt.Println("Length:", len(numbers))
-	fmt.Println("Capacity:", cap(numbers))
+	// numbers = append(numbers, 4) //when the length==capacity, then we append the element the capacity doubles
+	// fmt.Println("Slice:", numbers)
+	// fmt.Println("Length:", len(numbers))
+	// fmt.Println("Capacity:", cap(numbers))
+
+	// Video 14 (If-Else):------------------------------------------------------------
+	age := 25
+	if age > 18 {
+		fmt.Println("You are an adult")
+	} else if age == 18 {
+		fmt.Println("You are a 18")
+	} else {
+		fmt.Println("You are a minor")
+	}
 
 }
