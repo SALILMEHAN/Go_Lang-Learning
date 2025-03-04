@@ -123,13 +123,34 @@ func main() {
 	// fmt.Println("Capacity:", cap(numbers))
 
 	// Video 14 (If-Else):------------------------------------------------------------
-	age := 25
-	if age > 18 {
-		fmt.Println("You are an adult")
-	} else if age == 18 {
-		fmt.Println("You are a 18")
-	} else {
-		fmt.Println("You are a minor")
+	// age := 25
+	// if age > 18 {
+	// 	fmt.Println("You are an adult")
+	// } else if age == 18 {
+	// 	fmt.Println("You are a 18")
+	// } else {
+	// 	fmt.Println("You are a minor")
+	// }
+
+	// Video 15 (Switch-Case):------------------------------------------------------------
+	day := "Monday"
+	switch day {
+	case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
+		fmt.Println("Weekday")
+	case "Saturday", "Sunday":
+		fmt.Println("Weekend")
+	default:
+		fmt.Println("Invalid day")
+	}
+
+	temperature := 25
+	switch {
+	case temperature > 30:
+		fmt.Println("It's hot")
+	case temperature < 10:
+		fmt.Println("It's cold")
+	default:
+		fmt.Println("It's normal")
 	}
 
 }
