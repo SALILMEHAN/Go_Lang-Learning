@@ -154,21 +154,52 @@ func main() {
 	// }
 
 	// Video 16 (For Loop):------------------------------------------------------------
-	for i := 0; i < 5; i++ {
-		fmt.Println(i)
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Println(i)
+	// }
+
+	// counter := 0
+	// for {
+	// 	fmt.Println(counter)
+	// 	counter++
+	// 	if counter == 5 {
+	// 		break
+	// 	}
+	// }
+
+	// numbers := []int{11, 12, 13, 14, 15}
+	// for ind, val := range numbers {
+	// 	fmt.Println(ind, val)
+	// }
+
+	// Video 17 (Maps):------------------------------------------------------------
+	marks := make(map[string]int)
+
+	marks["Alice"] = 80
+	marks["Bob"] = 90
+	marks["Charlie"] = 70
+
+	fmt.Println(marks["Alice"])
+
+	delete(marks, "Bob")
+	fmt.Println(marks["Bob"])
+
+	//check for key present or not
+	grade, exist := marks["Alice"]
+	if exist {
+		fmt.Println("Grade of Alice is ", grade)
+	} else {
+		fmt.Println("No grade of Alice")
 	}
 
-	counter := 0
-	for {
-		fmt.Println(counter)
-		counter++
-		if counter == 5 {
-			break
-		}
+	grade2, exist2 := marks["David"]
+	if exist2 {
+		fmt.Println("Grade of David is ", grade2)
+	} else {
+		fmt.Println("No grade of David")
 	}
 
-	numbers := []int{11, 12, 13, 14, 15}
-	for ind, val := range numbers {
+	for ind, val := range marks {
 		fmt.Println(ind, val)
 	}
 
