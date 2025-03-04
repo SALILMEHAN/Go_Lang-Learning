@@ -94,20 +94,32 @@ func main() {
 	// }
 
 	// Video 12 (arrays):------------------------------------------------------------
-	var number [5]int
-	number[0] = 1
-	number[1] = 2
-	number[2] = 3
-	number[3] = 4
-	number[4] = 5
-	fmt.Println(number[0])
+	// var number [5]int
+	// number[0] = 1
+	// number[1] = 2
+	// number[2] = 3
+	// number[3] = 4
+	// number[4] = 5
+	// fmt.Println(number[0])
 
-	var num = [5]int{1, 2, 3, 4, 5}
-	fmt.Println(num[3])
+	// var num = [5]int{1, 2, 3, 4, 5}
+	// fmt.Println(num[3])
 
-	fmt.Println("Length of num is:", len(num))
+	// fmt.Println("Length of num is:", len(num))
 
-	var prices [10]int //after initialization of array every value assigned will be 0
-	fmt.Println(prices)
+	// var prices [10]int //after initialization of array every value assigned will be 0
+	// fmt.Println(prices)
+
+	// Video 13 (slices):------------------------------------------------------------
+	var numbers = make([]int, 3, 5) // Type, Length, Capacity
+
+	fmt.Println("Slice:", numbers)
+	fmt.Println("Length:", len(numbers))
+	fmt.Println("Capacity:", cap(numbers))
+
+	numbers = append(numbers, 4) //when the length==capacity, then we append the element the capacity doubles
+	fmt.Println("Slice:", numbers)
+	fmt.Println("Length:", len(numbers))
+	fmt.Println("Capacity:", cap(numbers))
 
 }
