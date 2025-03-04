@@ -133,24 +133,43 @@ func main() {
 	// }
 
 	// Video 15 (Switch-Case):------------------------------------------------------------
-	day := "Monday"
-	switch day {
-	case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
-		fmt.Println("Weekday")
-	case "Saturday", "Sunday":
-		fmt.Println("Weekend")
-	default:
-		fmt.Println("Invalid day")
+	// day := "Monday"
+	// switch day {
+	// case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
+	// 	fmt.Println("Weekday")
+	// case "Saturday", "Sunday":
+	// 	fmt.Println("Weekend")
+	// default:
+	// 	fmt.Println("Invalid day")
+	// }
+
+	// temperature := 25
+	// switch {
+	// case temperature > 30:
+	// 	fmt.Println("It's hot")
+	// case temperature < 10:
+	// 	fmt.Println("It's cold")
+	// default:
+	// 	fmt.Println("It's normal")
+	// }
+
+	// Video 16 (For Loop):------------------------------------------------------------
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
 	}
 
-	temperature := 25
-	switch {
-	case temperature > 30:
-		fmt.Println("It's hot")
-	case temperature < 10:
-		fmt.Println("It's cold")
-	default:
-		fmt.Println("It's normal")
+	counter := 0
+	for {
+		fmt.Println(counter)
+		counter++
+		if counter == 5 {
+			break
+		}
+	}
+
+	numbers := []int{11, 12, 13, 14, 15}
+	for ind, val := range numbers {
+		fmt.Println(ind, val)
 	}
 
 }
