@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func myFunction() {
@@ -22,6 +23,10 @@ func divide(a, b float64) (float64, error) {
 		return 0, fmt.Errorf("division by zero")
 	}
 	return a / b, nil
+}
+
+func modifyingDataThroughPassingReference(value *int) {
+	*value = *value * 5
 }
 
 // https://www.youtube.com/playlist?list=PLzjZaW71kMwSEVpdbHPr0nPo5zdzbDulm
@@ -205,59 +210,82 @@ func main() {
 
 	// Video 18 (Struct):------------------------------------------------------------
 
-	type Person struct {
-		FirstName string
-		LastName  string
-		Age       int
-	}
+	// type Person struct {
+	// 	FirstName string
+	// 	LastName  string
+	// 	Age       int
+	// }
 
-	//declaration type 1
-	var salil Person
+	// //declaration type 1
+	// var salil Person
 
-	salil.FirstName = "SALIL"
-	salil.LastName = "MEHAN"
-	salil.Age = 22
+	// salil.FirstName = "SALIL"
+	// salil.LastName = "MEHAN"
+	// salil.Age = 22
 
-	fmt.Println(salil.FirstName, salil.LastName, salil.Age)
-	fmt.Println(salil)
+	// fmt.Println(salil.FirstName, salil.LastName, salil.Age)
+	// fmt.Println(salil)
 
-	//declaration type 2
-	person1 := Person{
-		FirstName: "abc",
-		LastName:  "def",
-		Age:       23,
-	}
+	// //declaration type 2
+	// person1 := Person{
+	// 	FirstName: "abc",
+	// 	LastName:  "def",
+	// 	Age:       23,
+	// }
 
-	fmt.Println(person1.FirstName, person1.LastName, person1.Age)
+	// fmt.Println(person1.FirstName, person1.LastName, person1.Age)
 
-	//declaration type 3
-	var person2 = new(Person)
+	// //declaration type 3
+	// var person2 = new(Person)
 
-	person2.FirstName = "grcvcd"
-	person2.LastName = "grvfdf"
-	person2.Age = 54
+	// person2.FirstName = "grcvcd"
+	// person2.LastName = "grvfdf"
+	// person2.Age = 54
 
-	fmt.Println(person2.FirstName, person2.LastName, person2.Age)
+	// fmt.Println(person2.FirstName, person2.LastName, person2.Age)
 
-	//Important, struct in struct
+	// //Important, struct in struct
 
-	type Contact struct {
-		Phone string
-		Email string
-	}
+	// type Contact struct {
+	// 	Phone string
+	// 	Email string
+	// }
 
-	type employee struct {
-		employee_detail  Person
-		employee_contact Contact
-	}
+	// type employee struct {
+	// 	employee_detail  Person
+	// 	employee_contact Contact
+	// }
 
-	var emp1 employee
-	emp1.employee_detail.FirstName = "SALIL"
-	emp1.employee_detail.LastName = "MEHAN"
-	emp1.employee_detail.Age = 22
-	emp1.employee_contact.Phone = "1234567890"
-	emp1.employee_contact.Email = "salilmehan123@gmail.com"
+	// var emp1 employee
+	// emp1.employee_detail.FirstName = "SALIL"
+	// emp1.employee_detail.LastName = "MEHAN"
+	// emp1.employee_detail.Age = 22
+	// emp1.employee_contact.Phone = "1234567890"
+	// emp1.employee_contact.Email = "salilmehan123@gmail.com"
 
-	fmt.Println(emp1)
+	// fmt.Println(emp1)
+
+	// Video 19 (Pointers):------------------------------------------------------------
+	// num := 2
+	// ptr := &num
+	// fmt.Println(*ptr)
+	// fmt.Println(ptr)
+
+	// value := 5
+	// modifyingDataThroughPassingReference(&value)
+	// fmt.Println(value)
+
+	// Video 20 (Data Conversion):------------------------------------------------------------
+	var a int = 10
+	var b float64 = float64(a)
+	fmt.Println(b)
+	var c int = int(b)
+	fmt.Println(c)
+	var e string = strconv.Itoa(a)
+	fmt.Println(e)
+	f, _ := strconv.ParseFloat("10.5", 64)
+	fmt.Println(f)
+	var g int = int(f)
+	fmt.Println(g)
 
 }
