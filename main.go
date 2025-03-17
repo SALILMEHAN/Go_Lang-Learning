@@ -173,34 +173,91 @@ func main() {
 	// }
 
 	// Video 17 (Maps):------------------------------------------------------------
-	marks := make(map[string]int)
+	// marks := make(map[string]int)
 
-	marks["Alice"] = 80
-	marks["Bob"] = 90
-	marks["Charlie"] = 70
+	// marks["Alice"] = 80
+	// marks["Bob"] = 90
+	// marks["Charlie"] = 70
 
-	fmt.Println(marks["Alice"])
+	// fmt.Println(marks["Alice"])
 
-	delete(marks, "Bob")
-	fmt.Println(marks["Bob"])
+	// delete(marks, "Bob")
+	// fmt.Println(marks["Bob"])
 
-	//check for key present or not
-	grade, exist := marks["Alice"]
-	if exist {
-		fmt.Println("Grade of Alice is ", grade)
-	} else {
-		fmt.Println("No grade of Alice")
+	// //check for key present or not
+	// grade, exist := marks["Alice"]
+	// if exist {
+	// 	fmt.Println("Grade of Alice is ", grade)
+	// } else {
+	// 	fmt.Println("No grade of Alice")
+	// }
+
+	// grade2, exist2 := marks["David"]
+	// if exist2 {
+	// 	fmt.Println("Grade of David is ", grade2)
+	// } else {
+	// 	fmt.Println("No grade of David")
+	// }
+
+	// for ind, val := range marks {
+	// 	fmt.Println(ind, val)
+	// }
+
+	// Video 18 (Struct):------------------------------------------------------------
+
+	type Person struct {
+		FirstName string
+		LastName  string
+		Age       int
 	}
 
-	grade2, exist2 := marks["David"]
-	if exist2 {
-		fmt.Println("Grade of David is ", grade2)
-	} else {
-		fmt.Println("No grade of David")
+	//declaration type 1
+	var salil Person
+
+	salil.FirstName = "SALIL"
+	salil.LastName = "MEHAN"
+	salil.Age = 22
+
+	fmt.Println(salil.FirstName, salil.LastName, salil.Age)
+	fmt.Println(salil)
+
+	//declaration type 2
+	person1 := Person{
+		FirstName: "abc",
+		LastName:  "def",
+		Age:       23,
 	}
 
-	for ind, val := range marks {
-		fmt.Println(ind, val)
+	fmt.Println(person1.FirstName, person1.LastName, person1.Age)
+
+	//declaration type 3
+	var person2 = new(Person)
+
+	person2.FirstName = "grcvcd"
+	person2.LastName = "grvfdf"
+	person2.Age = 54
+
+	fmt.Println(person2.FirstName, person2.LastName, person2.Age)
+
+	//Important, struct in struct
+
+	type Contact struct {
+		Phone string
+		Email string
 	}
+
+	type employee struct {
+		employee_detail  Person
+		employee_contact Contact
+	}
+
+	var emp1 employee
+	emp1.employee_detail.FirstName = "SALIL"
+	emp1.employee_detail.LastName = "MEHAN"
+	emp1.employee_detail.Age = 22
+	emp1.employee_contact.Phone = "1234567890"
+	emp1.employee_contact.Email = "salilmehan123@gmail.com"
+
+	fmt.Println(emp1)
 
 }
