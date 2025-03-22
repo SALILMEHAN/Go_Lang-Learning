@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func myFunction() {
@@ -307,20 +306,29 @@ func main() {
 	// fmt.Println(out4)
 
 	// Video 22 (Time Package):------------------------------------------------------------
-	t := time.Now()
-	fmt.Println(t)
+	// t := time.Now()
+	// fmt.Println(t)
 
-	formatted := t.Format("02-01-2006, Monday, 15:04:05")
-	fmt.Println(formatted)
+	// formatted := t.Format("02-01-2006, Monday, 15:04:05")
+	// fmt.Println(formatted)
 
-	datestr := "2023-11-25"
-	layout_str := "2006-01-02"
-	formatted_time, _ := time.Parse(layout_str, datestr)
-	fmt.Println(formatted_time)
+	// datestr := "2023-11-25"
+	// layout_str := "2006-01-02"
+	// formatted_time, _ := time.Parse(layout_str, datestr)
+	// fmt.Println(formatted_time)
 
-	new_t := t.Add(24 * time.Hour) // adding 1 day
-	fmt.Println(new_t)
-	new_t1 := new_t.Format("02-01-2006 Monday")
-	fmt.Println(new_t1)
+	// new_t := t.Add(24 * time.Hour) // adding 1 day
+	// fmt.Println(new_t)
+	// new_t1 := new_t.Format("02-01-2006 Monday")
+	// fmt.Println(new_t1)
+
+	// Video 23 (Defer):------------------------------------------------------------
+	fmt.Println("1st")
+	fmt.Println("2nd")
+	defer fmt.Println("3rd")
+	defer fmt.Println("4th")
+	fmt.Println("5th")
+	defer fmt.Println("6th")
+	fmt.Println("7th")
 
 }
