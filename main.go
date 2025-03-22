@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"time"
 )
 
 func myFunction() {
@@ -289,21 +289,38 @@ func main() {
 	// fmt.Println(g)
 
 	// Video 21 (String Packages):------------------------------------------------------------
-	data := "apple,orange,banana"
-	final := strings.Split(data, ",") //Split Function
-	fmt.Println(final)
+	// data := "apple,orange,banana"
+	// final := strings.Split(data, ",") //Split Function
+	// fmt.Println(final)
 
-	str := "one two three four two five two"
-	out2 := strings.Count(str, "two") //Count Characters
-	fmt.Println(out2)
+	// str := "one two three four two five two"
+	// out2 := strings.Count(str, "two") //Count Characters
+	// fmt.Println(out2)
 
-	str2 := "               lets go              "
-	out3 := strings.TrimSpace(str2) //Trim
-	fmt.Println(out3)
+	// str2 := "               lets go              "
+	// out3 := strings.TrimSpace(str2) //Trim
+	// fmt.Println(out3)
 
-	str3 := "Salil"
-	str4 := "Mehan"
-	out4 := strings.Join([]string{str3, str4, "Hello"}, " ") //concatinate
-	fmt.Println(out4)
+	// str3 := "Salil"
+	// str4 := "Mehan"
+	// out4 := strings.Join([]string{str3, str4, "Hello"}, " ") //concatinate
+	// fmt.Println(out4)
+
+	// Video 22 (Time Package):------------------------------------------------------------
+	t := time.Now()
+	fmt.Println(t)
+
+	formatted := t.Format("02-01-2006, Monday, 15:04:05")
+	fmt.Println(formatted)
+
+	datestr := "2023-11-25"
+	layout_str := "2006-01-02"
+	formatted_time, _ := time.Parse(layout_str, datestr)
+	fmt.Println(formatted_time)
+
+	new_t := t.Add(24 * time.Hour) // adding 1 day
+	fmt.Println(new_t)
+	new_t1 := new_t.Format("02-01-2006 Monday")
+	fmt.Println(new_t1)
 
 }
