@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	"strings"
 )
 
 func myFunction() {
@@ -276,16 +276,34 @@ func main() {
 	// fmt.Println(value)
 
 	// Video 20 (Data Conversion):------------------------------------------------------------
-	var a int = 10
-	var b float64 = float64(a)
-	fmt.Println(b)
-	var c int = int(b)
-	fmt.Println(c)
-	var e string = strconv.Itoa(a)
-	fmt.Println(e)
-	f, _ := strconv.ParseFloat("10.5", 64)
-	fmt.Println(f)
-	var g int = int(f)
-	fmt.Println(g)
+	// var a int = 10
+	// var b float64 = float64(a)
+	// fmt.Println(b)
+	// var c int = int(b)
+	// fmt.Println(c)
+	// var e string = strconv.Itoa(a)
+	// fmt.Println(e)
+	// f, _ := strconv.ParseFloat("10.5", 64)
+	// fmt.Println(f)
+	// var g int = int(f)
+	// fmt.Println(g)
+
+	// Video 21 (String Packages):------------------------------------------------------------
+	data := "apple,orange,banana"
+	final := strings.Split(data, ",") //Split Function
+	fmt.Println(final)
+
+	str := "one two three four two five two"
+	out2 := strings.Count(str, "two") //Count Characters
+	fmt.Println(out2)
+
+	str2 := "               lets go              "
+	out3 := strings.TrimSpace(str2) //Trim
+	fmt.Println(out3)
+
+	str3 := "Salil"
+	str4 := "Mehan"
+	out4 := strings.Join([]string{str3, str4, "Hello"}, " ") //concatinate
+	fmt.Println(out4)
 
 }
